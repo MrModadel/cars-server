@@ -16,7 +16,8 @@ let cars = [
       engine: 6.3,
       color: 'black',
       price: 350000,
-      year: 2022
+      year: 2022,
+      image: 'https://bigfoto.top/uploads/posts/2022-10/1666484109_1-bigfoto-top-p-mersedes-c63-1.jpg'
    },
    {
       id: Math.random(),
@@ -25,7 +26,8 @@ let cars = [
       engine: 4,
       color: 'white',
       price: 90000,
-      year: 2018
+      year: 2018,
+      image: 'https://proaveo.ru/wp-content/uploads/7/3/1/7316f3d748b75f84181babe1d24cdc38.jpeg'
    },
    {
       id: Math.random(),
@@ -34,7 +36,8 @@ let cars = [
       engine: 0.7,
       color: 'blue',
       price: 5000,
-      year: 2010
+      year: 2010,
+      image: 'https://discover24.ru/wp-content/uploads/2018/05/1526629759_1.jpg'
    },
    {
       id: Math.random(),
@@ -43,7 +46,8 @@ let cars = [
       engine: 6,
       color: 'red',
       price: 250000,
-      year: 2015
+      year: 2015,
+      image: 'https://mobimg.b-cdn.net/v3/fetch/3b/3bb17b2c5dc07f1521d2eddf3eb61fc2.jpeg'
    },
    {
       id: Math.random(),
@@ -52,7 +56,8 @@ let cars = [
       engine: 5.6,
       color: 'yellow',
       price: 300000,
-      year: 2022
+      year: 2022,
+      image: 'https://i.pinimg.com/originals/22/4d/3e/224d3ef4c492f2f2d5be8a5bd199b791.jpg'
    },
    {
       id: Math.random(),
@@ -61,7 +66,8 @@ let cars = [
       engine: 6,
       color: 'black',
       price: 400000,
-      year: 2022
+      year: 2022,
+      image: 'https://wroom.ru/i2/carpic/10577.jpg'
    },
    {
       id: Math.random(),
@@ -70,7 +76,8 @@ let cars = [
       engine: 2.5,
       color: 'white',
       price: 30000,
-      year: 2021
+      year: 2021,
+      image: 'https://replicadisk.ru/wp-content/uploads/4/c/f/4cf5d0f6b24c10333ea27a38591c5219.jpeg'
    },
 ]
 
@@ -159,11 +166,13 @@ if (filtered.length !== 0) {
                } else {
                   alert('пошел вон!')
                }
+            } else {
+               alert('пошел вон!')
             }
          } else {
             alert('пошел вон!')
          }
-      } else {
+      } else if(toBuy === false){
          alert('пошел вон!')
       }
    } else {
