@@ -91,8 +91,8 @@ for (let num of cars) {
       maxM = num.price;
    };
    orSpeed+=num.engine;
-   or = orSpeed/cars.length;
 };
+or = orSpeed/cars.length;
 let allnum = [];
 let allNumder = cars.filter(item=>{
    allnum.push(Math.round(item.engine*100/max)+'%')
