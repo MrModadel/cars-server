@@ -82,18 +82,16 @@ let cars = [{
 let orSpeed = 0;
 let or;
 let max = cars[0].engine;
+let maxM = cars[0].price;
 for (let num of cars) {
    if (max < num.engine) {
       max = num.engine;
-   }
-   orSpeed+=num.engine;
-   or = orSpeed/cars.length;
-};
-let maxM = cars[0].price;
-for (let num of cars) {
+   };
    if (maxM < num.price) {
       maxM = num.price;
-   }
+   };
+   orSpeed+=num.engine;
+   or = orSpeed/cars.length;
 };
 let allnum = [];
 let allNumder = cars.filter(item=>{
