@@ -79,15 +79,29 @@ let cars = [{
    image: 'https://i.pinimg.com/originals/ad/65/84/ad6584cf23803422048cc08d40226f0e.jpg'
 },
 ]
-
+let orSpeed = 0;
+let or;
 let max = cars[0].engine;
 for (let num of cars) {
    if (max < num.engine) {
       max = num.engine;
    }
-}
+   orSpeed+=num.engine;
+   or = orSpeed/cars.length;
+};
+let maxM = cars[0].price;
+for (let num of cars) {
+   if (maxM < num.price) {
+      maxM = num.price;
+   }
+};
 let allnum = [];
 let allNumder = cars.filter(item=>{
-   allnum.push(Math.floor(item.engine*100/max)+'%')
-})
-console.log(allnum);
+   allnum.push(Math.round(item.engine*100/max)+'%')
+});
+console.log(
+   `Самая дорогая машина из списка ${maxM}$`+"\n"+
+   `Самая быстрая машина из списка ${max}`+"\n"+
+   `Скорость машин из спика отнасительно самой быстрой (в процентах)=${allnum}`+"\n"+
+   `Средняя скорость всех машин из списка=${or}`
+);
