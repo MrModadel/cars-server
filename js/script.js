@@ -87,19 +87,22 @@ for (let num of cars) {
    if (max < num.engine) {
       max = num.engine;
    };
+   orSpeed += num.engine;
+   or = Math.round(orSpeed / cars.length);
+
+};
+for (let num of cars) {
    if (maxM < num.price) {
       maxM = num.price;
    };
-   orSpeed+=num.engine;
-};
-or = orSpeed/cars.length;
+}
 let allnum = [];
-let allNumder = cars.filter(item=>{
-   allnum.push(Math.round(item.engine*100/max)+'%')
+let allNumder = cars.filter(item => {
+   allnum.push(Math.round(item.engine * 100 / max) + '%')
 });
 console.log(
-   `Самая дорогая машина из списка ${maxM}$`+"\n"+
-   `Самая быстрая машина из списка ${max}`+"\n"+
-   `Скорость машин из спика отнасительно самой быстрой (в процентах)=${allnum}`+"\n"+
+   `Самая дорогая машина из списка ${maxM}$` + "\n" +
+   `Самая быстрая машина из списка ${max}` + "\n" +
+   `Скорость машин из спика отнасительно самой быстрой (в процентах)=${allnum}` + "\n" +
    `Средняя скорость всех машин из списка=${or}`
 );
